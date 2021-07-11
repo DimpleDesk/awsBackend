@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const schema = new Schema({
-    username: { 
+    email: { 
 			type: String, 
 			unique: true, 
 			required: true 
@@ -11,15 +11,15 @@ const schema = new Schema({
 			type: String, 
 			required: true 
 		},
-    firstName: { 
+    given_name: { 
 			type: String, 
 			required: true 
 		},
-		lastName: { 
+		family_name: { 
 			type: String, 
 			required: true 
 		},
-		imageURL: { 
+		picture: { 
 			type: String, 
 			required: false 
 		},
@@ -33,6 +33,14 @@ const schema = new Schema({
 		},
 		industry: { 
 			type: String, 
+			required: false 
+		},
+		bookmarked: { 
+			type: Array, 
+			required: false 
+		},
+		contacted: { 
+			type: Array, 
 			required: false 
 		},
 		createdDate: { 
